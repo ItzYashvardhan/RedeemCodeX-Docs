@@ -72,6 +72,6 @@ Make sure your project syncs successfully. If you see issues:
 
 To stay on the latest version:
 
-* Watch the [RedeemCodeX GitHub repository](https://github.com/ItzYashvardhan/RedeemCodeX)
+* Watch the [RedeemCodeX-API GitHub repository](https://github.com/ItzYashvardhan/RedeemCodeX-API)
 * Update your dependency when new tags are published
 

@@ -27,3 +27,9 @@ The `/redeem` command allows players to claim rewards using special codes. These
     ```
         /redeem SECRET2025 9844
     ```
+
+## :octicons-shield-check-16: Permissions Optional
+
+```yaml
+redeemx.use
+```

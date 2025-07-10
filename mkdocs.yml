@@ -1,6 +1,12 @@
 site_name: RedeemCodeX
+repo_url: https://github.com/ItzYashvardhan/RedeemCodeX-API
+repo_name: GitHub
 
-site_url: https://example.com
+site_description: RedeemCodex Documentation
+site_url: https://github.com/ItzYashvardhan/RedeemCodeX-Docs
+site_author: Yashvardhan
+edit_uri: edit/main/docs/
+
 markdown_extensions:
   - attr_list
   - admonition
@@ -15,6 +21,7 @@ markdown_extensions:
 
 theme:
   icon:
+    repo: fontawesome/brands/github
     logo: material/minecraft
     admonition:
       note: octicons/tag-16
@@ -52,13 +59,19 @@ theme:
     - content.code.copy
     - content.tabs.link
 extra:
+    version:
+      provider: mike
     social:
     - icon: fontawesome/brands/discord 
       link: https://discord.gg/rVsUJ4keZN
     - icon: fontawesome/brands/github
-      link: https://github.com/Yashvardhan76
+      link: https://github.com/ItzYashvardhan/RedeemCodeX-API
+    
+extra_css:
+  - css/custom.css
 
-copyright: Copyright &copy; 2025 Yashvardhan Singh
+
+copyright: Copyright &copy; 2024 Yashvardhan Singh
 nav:
   - START: 
     - Overview: index.md
@@ -74,6 +87,7 @@ nav:
     - Delete: commands/rcx-delete.md #rcx-delete
     - Preview: commands/rcx-preview.md #rcx-preview
     - Usage: commands/rcx-usage.md #rcx-usage
+    - List: commands/rcx-list.md #rcx-list
     - Renew: commands/rcx-renew.md #rcx-renew
   - PERMISSIONS: 
     - Player: permissions/player-permissions.md #permissions-overview
@@ -90,8 +104,7 @@ nav:
     - Template: api/api-template.md
     # - License: misc/license.md
     # - FAQ: misc/faq.md
-#  - ADDONS:
-#    - Overview: addons/addon-overview.md
-#    - DiscordBotX: addons/discord-bot-x.md
-#    - RedeemXAPI: addons/redeem-x-api.md
-
+  - ADDONS:
+    - Overview: addons/addon-overview.md
+    - DiscordBotX: addons/discord-bot-x.md
+    - RedeemXRestAPI: addons/redeem-x-rest-api.md

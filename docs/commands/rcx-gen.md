@@ -24,7 +24,14 @@ The `/rcx gen` command is used by administrators to generate **redeem codes** or
     `Sample Output` <br>
     `Generated CODE: VIPACCESS FROM DEFAULT TEMPLATE`
 
-!!! example "Generate total 5 codes of 4 letter-based using a template"
+!!! example "Generate multiple custom code"
+    ```
+    /rcx gen code CUSTOM1 VIP CUSTOM2 CUSTOM3
+    ```
+    `Sample Output` <br>
+    `Generated CODE: CUSTOM1 CUSTOM2 CUSTOM3 FROM DEFAULT TEMPLATE`
+
+!!! example "Generate Codes using a template"
     ```
     /rcx gen code 4 VIP 5
     ```
@@ -32,7 +39,6 @@ The `/rcx gen` command is used by administrators to generate **redeem codes** or
     ```
     Generated CODE: 7AK1 AK78 MK12 RCB9 ANIC FROM VIP TEMPLATE
     ```
-    
 
 !!! example "Create a new template"
     ```
@@ -48,7 +54,7 @@ The `/rcx gen` command is used by administrators to generate **redeem codes** or
 ## :octicons-light-bulb-16: Parameters
 
 - `CUSTOM`: Any custom name like `VIP2025`, `SUMMERPASS`
-- `DIGIT`: A number indicating how many random digits should be in the code (`e.g. 6 → XA32DJ`)
+- `DIGIT`: A number indicating how many random digits should be in the code
 - `TEMPLATE`: Name of an existing template to apply pre-defined settings to generated codes
 - `AMOUNT`: How many codes to generate (defaults to 1 if not specified)
 
