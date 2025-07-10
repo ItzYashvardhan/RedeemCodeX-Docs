@@ -1,107 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.com/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/properties/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/properties/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/todolist/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/todolist/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/addons/addon-overview/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/addons/addon-overview/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/addons/discord-bot-x/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/addons/discord-bot-x/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/addons/redeem-x-rest-api/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/addons/redeem-x-rest-api/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/api/api-adding-dependencies/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/api/api-adding-dependencies/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/api/api-code/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/api/api-code/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/api/api-template/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/api/api-template/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/commands/rcx-delete/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/commands/rcx-delete/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/commands/rcx-gen/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/commands/rcx-gen/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/commands/rcx-modify/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/commands/rcx-list/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/commands/rcx-preview/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/commands/rcx-modify/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/commands/rcx-renew/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/commands/rcx-preview/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/commands/rcx-usage/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/commands/rcx-renew/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/commands/redeem/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/commands/rcx-usage/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/general/config-guide/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/commands/redeem/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/general/features/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/general/config-guide/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/general/installation/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/general/features/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/general/template-guide/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/general/installation/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/misc/changelog/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/general/template-guide/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/misc/faq/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/misc/changelog/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/misc/license/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/misc/faq/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/misc/placeholders/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/misc/license/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/permissions/admin-permissions/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/misc/placeholders/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
-         <loc>https://example.com/permissions/player-permissions/</loc>
-         <lastmod>2025-06-29</lastmod>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/permissions/admin-permissions/</loc>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/ItzYashvardhan/RedeemCodeX-Docs/permissions/player-permissions/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
 </urlset>
