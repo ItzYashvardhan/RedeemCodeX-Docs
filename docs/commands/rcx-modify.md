@@ -129,6 +129,38 @@ Set or change the PIN required for redemption.
 
 ---
 
+### ⚙️ `condition`
+
+Attach or remove a condition from a code or template. Conditions act as custom logic or flags required before a player can redeem.
+
+=== "Code"
+    ```
+    /rcx modify code <code> condition [condition]
+    ```
+
+=== "Template"
+    ```
+    /rcx modify template <template> condition [condition]
+    ```
+
+
+!!! info ""
+    Conditions can be used to restrict redemptions based on custom logic, such as group membership, world, time, or external API flags.
+
+!!!example
+    ```
+    /rcx modify template VIP condition %statistic_days_played% > 3 && %statistic_hours_played% > 12
+    ```
+
+    ```
+    /rcx modify template PREMIUM condition "{player}" == "ItzJustLime" || (%statistic_chest_opened% >=1000 && %statistic_hours_played% > 12)
+    ```
+
+!!! tip
+    Combine conditions with permission checks or bypass rules for powerful access control.
+
+---
+
 ### 🎯 `target`
 
 Control who can redeem a code using player targeting.
