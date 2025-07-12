@@ -853,6 +853,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#target" class="md-nav__link">
     <span class="md-ellipsis">
       🎯 target
@@ -1183,6 +1192,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../permissions/bypass-permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bypass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1260,9 +1292,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../misc/changelog/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1271,7 +1317,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Changelog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/changelog/1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    version 1.0
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/changelog/1.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    version 1.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1609,6 +1713,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#target" class="md-nav__link">
     <span class="md-ellipsis">
       🎯 target
@@ -1864,6 +1977,35 @@ Set custom permission for template
 <p>PINs add an extra security layer — useful for limited or exclusive codes.</p>
 </div>
 <hr />
+<h3 id="condition">⚙️ <code>condition</code></h3>
+<p>Attach or remove a condition from a code or template. Conditions act as custom logic or flags required before a player can redeem.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Code</label><label for="__tabbed_7_2">Template</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>/rcx modify code &lt;code&gt; condition [condition]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>/rcx modify template &lt;template&gt; condition [condition]
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p>Conditions can be used to restrict redemptions based on custom logic, such as group membership, world, time, or external API flags.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>/rcx modify template VIP condition %statistic_days_played% &gt; 3 &amp;&amp; %statistic_hours_played% &gt; 12
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>/rcx modify template PREMIUM condition &quot;{player}&quot; == &quot;ItzJustLime&quot; || (%statistic_chest_opened% &gt;=1000 &amp;&amp; %statistic_hours_played% &gt; 12)
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Combine conditions with permission checks or bypass rules for powerful access control.</p>
+</div>
+<hr />
 <h3 id="target">🎯 <code>target</code></h3>
 <p>Control who can redeem a code using player targeting.</p>
 <pre><code>/rcx modify code &lt;code&gt; addTarget &lt;players&gt;
@@ -1878,7 +2020,7 @@ Set custom permission for template
 <hr />
 <h3 id="duration">⏳ <code>duration</code></h3>
 <p>Set how long a code stays valid.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Code</label><label for="__tabbed_7_2">Template</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Code</label><label for="__tabbed_8_2">Template</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><div class="highlight"><pre><span></span><code>/rcx modify code &lt;code&gt; addDuration &lt;value&gt;
@@ -1902,7 +2044,7 @@ Set custom permission for template
 <hr />
 <h3 id="cooldown">🔁 <code>cooldown</code></h3>
 <p>Set cooldown duration between redemptions.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Code</label><label for="__tabbed_8_2">Template</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Code</label><label for="__tabbed_9_2">Template</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>/rcx modify code &lt;code&gt; cooldown &lt;value&gt;
@@ -1952,7 +2094,7 @@ Set custom permission for template
 </table>
 <hr />
 <p>🛠️ Syntax</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Code</label><label for="__tabbed_9_2">Template</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Code</label><label for="__tabbed_10_2">Template</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>/rcx modify code &lt;code&gt; addCommand [prefix] &lt;command&gt;
@@ -1999,7 +2141,7 @@ Set custom permission for template
 </code></pre></div></p>
 <hr />
 <h3 id="sync">🔄 <code>sync</code></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Code</label><label for="__tabbed_10_2">Template</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Code</label><label for="__tabbed_11_2">Template</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Toggle template sync on or off. When enabled, any changes made to the template will automatically apply to the code.
@@ -2045,7 +2187,7 @@ If <code>enabled</code>, the code will inherit the property from the template an
 <hr />
 <h3 id="rewards">🖼️ <code>rewards</code></h3>
 <p>Opens GUI to visually edit rewards.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Code</label><label for="__tabbed_11_2">Template</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Code</label><label for="__tabbed_12_2">Template</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>/rcx modify code &lt;code&gt; rewards
@@ -2060,7 +2202,7 @@ If <code>enabled</code>, the code will inherit the property from the template an
 <hr />
 <h3 id="sounds">🔊 <code>sounds</code></h3>
 <p>Opens GUI to visually edit rewards.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Code</label><label for="__tabbed_12_2">Template</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Code</label><label for="__tabbed_13_2">Template</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>/rcx modify code &lt;code&gt; sound &lt;sound&gt; [pitch] [volume]
@@ -2083,7 +2225,7 @@ If <code>enabled</code>, the code will inherit the property from the template an
 <hr />
 <h3 id="messages">💬 <code>messages</code></h3>
 <p>Customize custom message for cetain code or template code.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Code</label><label for="__tabbed_13_2">Template</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Code</label><label for="__tabbed_14_2">Template</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><div class="highlight"><pre><span></span><code>/rcx modify code &lt;code&gt; addMessage &lt;message&gt;
@@ -2106,7 +2248,7 @@ If <code>enabled</code>, the code will inherit the property from the template an
 <hr />
 <h3 id="title">📢 <code>title</code></h3>
 <p>Customize custom title &amp; subtitle for cetain code or template code.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Code</label><label for="__tabbed_14_2">Template</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Code</label><label for="__tabbed_15_2">Template</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>/rcx modify code &lt;code&gt; title [fade-in] [stay] [fade-out] &lt;title&gt;
@@ -2139,7 +2281,7 @@ If <code>enabled</code>, the code will inherit the property from the template an
 <hr />
 <h3 id="subtitle">📢 <code>subtitle</code></h3>
 <p>Customize custom title &amp; subtitle for cetain code or template code.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Code</label><label for="__tabbed_15_2">Template</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Code</label><label for="__tabbed_16_2">Template</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>/rcx modify code &lt;code&gt; subtitle &lt;title&gt;
