@@ -1,4 +1,4 @@
-## 🚀 Official Addons – RedeemCodeX
+## 🚀 Official Addons
 
 Enhance your RedeemCodeX experience with these two powerful official addons:
 

@@ -7,7 +7,7 @@ The **RedeemXRestAPI**  provides a RESTful interface to the [RedeemCodeX](https:
 ## ⚙️ Configuration
 
 * Install the Latest version of [RedeemXRestAPI](https://github.com/ItzYashvardhan/RedeemXRestAPI/tags)
-* Setup the API `host` and `port` inside `config.yml`. Generally 
+* Setup the API `host` and `port` inside `config.yml`. Generally default `localhost` used
 * All requests must include a valid token using the `Authorization` header.
 
 ---

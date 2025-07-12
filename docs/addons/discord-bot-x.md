@@ -64,7 +64,7 @@ Use the following link format to invite your bot to your server:
 https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=2260742241024&scope=bot%20applications.commands
 ```
 
-> ✅ Replace `YOUR_CLIENT_ID` with the one copied in Step 5.
+> ✅ Replace `YOUR_CLIENT_ID` with the one copied in Step 3.
 
 This will authorize the bot with:
 
@@ -86,7 +86,7 @@ bot:
 
   # Role IDs that have permission to use bot commands
   roles:
-    - "1327892147723890698" # Example
+    - "1327892147723890698" #Example
 ```
 
 > ⚠️ **Important:**
