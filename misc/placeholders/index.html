@@ -1679,15 +1679,59 @@
 </thead>
 <tbody>
 <tr>
-<td>redeemcodex_redemption</td>
+<td><code>%redeemx_total_codes%</code></td>
+<td>Total number of codes in the system</td>
+</tr>
+<tr>
+<td><code>%redeemx_total_templates%</code></td>
+<td>Total number of templates in the system</td>
+</tr>
+<tr>
+<td><code>%redeemx_can_redeem_code_{code}%</code></td>
+<td>Whether the player can redeem the given code (returns message like ALLOWED, etc.)</td>
+</tr>
+<tr>
+<td><code>%redeemx_can_redeem_code_bool_{code}%</code></td>
+<td>Whether the player can redeem the code (true/false)</td>
+</tr>
+<tr>
+<td><code>%redeemx_can_redeem_template_{template}%</code></td>
+<td>Whether the player can redeem a specific template (returns status)</td>
+</tr>
+<tr>
+<td><code>%redeemx_can_redeem_template_bool_{template}%</code></td>
+<td>Whether the player can redeem the template (true/false)</td>
+</tr>
+<tr>
+<td>**<code>%redeemx_redemption%</code></td>
 <td>Total number of times the player has redeemed any code</td>
+</tr>
+<tr>
+<td>**<code>%redeemx_unique_redemption%</code></td>
+<td>Total number of unique codes the player has redeemed</td>
+</tr>
+<tr>
+<td>**<code>%redeemx_codes%</code></td>
+<td>List of all codes redeemed by the player</td>
+</tr>
+<tr>
+<td>**<code>%redeemx_codes_template_{template}%</code></td>
+<td>List of codes redeemed from a specific template</td>
+</tr>
+<tr>
+<td>**<code>%redeemx_redemption_template_{template}%</code></td>
+<td>Number of redemptions from a specific template</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition abstract">
+<p class="admonition-title">TODO</p>
+<p>Some of the placeholder which are marked with <code>*</code> will not work as it is still being added</p>
+</div>
 <h2 id="example-usage">🧪 Example Usage</h2>
 <div class="admonition example">
 <p class="admonition-title">Using placeholders in messages</p>
-<div class="highlight"><pre><span></span><code>&amp;fYou have successfully redeemed {code%}!
+<div class="highlight"><pre><span></span><code><span class="nl">&amp;fYou</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">have successfully redeemed {code}!</span>
 </code></pre></div>
 </div>
 <div class="admonition example">
