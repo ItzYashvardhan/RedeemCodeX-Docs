@@ -80,13 +80,27 @@ You can use placeholders in:
 
 | Placeholder                          | Description                                            |
 |--------------------------------------|--------------------------------------------------------|
-| redeemcodex_redemption               | Total number of times the player has redeemed any code |
+| `%redeemx_total_codes%`               | Total number of codes in the system                                        |
+| `%redeemx_total_templates%`           | Total number of templates in the system                                    |
+| `%redeemx_can_redeem_code_{code}%`    | Whether the player can redeem the given code (returns message like ALLOWED, etc.) |
+| `%redeemx_can_redeem_code_bool_{code}%` | Whether the player can redeem the code (true/false)                     |
+| `%redeemx_can_redeem_template_{template}%` | Whether the player can redeem a specific template (returns status)    |
+| `%redeemx_can_redeem_template_bool_{template}%` | Whether the player can redeem the template (true/false)         |
+| **`%redeemx_redemption%`                | Total number of times the player has redeemed any code                     |
+| **`%redeemx_unique_redemption%`         | Total number of unique codes the player has redeemed                       |
+| **`%redeemx_codes%`                     | List of all codes redeemed by the player                                   |
+| **`%redeemx_codes_template_{template}%` | List of codes redeemed from a specific template                            |
+| **`%redeemx_redemption_template_{template}%` | Number of redemptions from a specific template                         |
+
+
+!!!abstract "TODO"
+    Some of the placeholder which are marked with `*` will not work as it is still being added
 
 ## 🧪 Example Usage
 
 !!! example "Using placeholders in messages"
-    ```
-    &fYou have successfully redeemed {code%}!
+    ```yaml
+    &fYou have successfully redeemed {code}!
     ```
 
 !!! example "In reward title"

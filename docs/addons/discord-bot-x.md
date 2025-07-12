@@ -1,10 +1,6 @@
-# 🤖 Discord Bot Addon — RedeemCodeX
+# 🤖 Discord Bot Addon
 
 The **Discord Bot Addon** lets server admins manage and interact with RedeemCodeX **directly from Discord using slash commands** — perfect for template, code, and usage control without needing in-game or console access.
-
----
-
-Here’s a clean, professional **Installation Guide** section for the Discord Bot Addon using your 5 screenshots, guiding users through bot creation, token setup, and invite:
 
 ---
 
