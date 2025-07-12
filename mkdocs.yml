@@ -92,6 +92,7 @@ nav:
   - PERMISSIONS: 
     - Player: permissions/player-permissions.md #permissions-overview
     - Admin: permissions/admin-permissions.md #permissions-overview
+    - Bypass: permissions/bypass-permissions.md #permissions-overview
 
 
   

@@ -8,12 +8,14 @@
 ## 🛠️ Admin Permissions
 | Node                       | Description                                           |
 | -------------------------- | ----------------------------------------------------- |
-| `redeemx.admin.use.gen`    | Allows generating new codes or templates              |
-| `redeemx.admin.use.modify` | Allows modifying codes and templates                  |
-| `redeemx.admin.use.delete` | Allows deleting codes and templates                   |
-| `redeemx.admin.use.preview`| Allows previewing codes or viewing usage stats        |
-| `redeemx.admin.use.renew`  | Allows renewing expired codes                         |
-| `redeemx.admin.use.reload` | Allows reloading plugin configuration (`/rcx reload`) |
+| `redeemx.admin.gen`    | Allows generating new codes or templates                  |
+| `redeemx.admin.modify` | Allows modifying codes and templates                  |
+| `redeemx.admin.delete` | Allows deleting codes and templates                   |
+| `redeemx.admin.preview`| Allows previewing codes or viewing usage stats        |
+| `redeemx.admin.renew`  | Allows renewing expired codes                         |
+| `redeemx.admin.list`   | Allows getting list of codesor template               |
+| `redeemx.admin.reload` | Allows reloading plugin configuration (`/rcx reload`) |
+| `redeemx.admin.*`      | Grants all admin permissions listed above.            |
 
 !!! example "Example"
     ```
