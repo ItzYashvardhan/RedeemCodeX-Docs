@@ -99,8 +99,8 @@ nav:
   - MISCELLANEOUS: 
     - Placeholders: misc/placeholders.md
     - Changelog: 
-      - version 1.0: misc/changelog/1.0.md
       - version 1.1: misc/changelog/1.1.md
+      - version 1.0: misc/changelog/1.0.md
   - API:
     - Dependencies: api/api-adding-dependencies.md
     - Code: api/api-code.md
