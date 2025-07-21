@@ -63,6 +63,6 @@ The `/rcx gen` command is used by administrators to generate **redeem codes** or
 ## :octicons-shield-check-16: Permissions Required
 
 ```yaml
-redeemx.admin.use.gen
+redeemx.admin.gen
 ```
 

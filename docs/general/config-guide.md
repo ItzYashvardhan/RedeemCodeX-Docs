@@ -48,16 +48,14 @@ code:
 ```yaml
 redeem-command:
   cooldown: "3s"
-  prevent-alt-account: true #TODO
+  prevent-alt-account: true
 ```
 
-* Adds cooldown between redemptions
+- **`cooldown`**  
+  Adds a cooldown period between each code redemption attempt.
 
-!!!abstract "Future Planned"
-    * Prevents alts (same IP usage) — (Planned/TODO)
-
-<!-- !!! warning "IP Protection"
-    Alt-detection checks for the same IP. It won't work if player limits are not set. -->
+- **`prevent-alt-account`**  
+  Once a code is redeemed by a player, it cannot be redeemed again from any alternate account associated with the same IP.
 
 ---
 
@@ -71,7 +69,7 @@ auto-delete:
 
 | Option           | Behavior                                                    |
 | ---------------- | ----------------------------------------------------------- |
-| `expired-codes`  | Delete codes after expiration (on server restart)           |
+| `expired-codes`  | Delete codes after expiration                               |
 | `redeemed-codes` | Delete codes when both redemption and player limits are met |
 
 ---
@@ -89,7 +87,7 @@ rewards:
 | ------------- | --------------------------------------------- |
 | `drop`        | Drop item if inventory is full                |
 | `sound`       | Play a sound when item is dropped             |
-| `equip-armor` | Auto-equip armor when received (planned/TODO) |
+| `equip-armor` | Auto-equip armor when received                |
 
 ---
 
@@ -120,20 +118,57 @@ renew:
 
 ```yaml
 logger:
-  generate: true
-  modify: true
-  delete: true
-  redeemed: true
+  redeem: true      # Logs the player, code, and redemption time.
+  generate: true    # Logs the code and template with creation time. Recommended for bulk generation.
+  modify: true      # Logs the code and template with last modification time.
+  delete: true      # Logs the code and template with deletion time.
+  preview: true     # Logs the code and template when previewed.
+  renew: true       # Logs the code and template when renewed.
+
   webhook:
-    enabled: false
-    url: "YOUR_DISCORD_WEBHOOK_URL"
+    enabled: false   # Enable or disable webhook logging.
+    
+    # Webhook URLs for sending logs to Discord
+    url:
+      default: YOUR_DISCORD_WEBHOOK_URL
+      redeem: YOUR_DISCORD_WEBHOOK_URL
+      generate: YOUR_DISCORD_WEBHOOK_URL
+      modify: YOUR_DISCORD_WEBHOOK_URL
+      delete: YOUR_DISCORD_WEBHOOK_URL
+      preview: YOUR_DISCORD_WEBHOOK_URL
+      renew: YOUR_DISCORD_WEBHOOK_URL
+
+    # Whether to send only embed messages for each type
+    only-embed:
+      default: false
+      redeem: false
+      generate: false
+      delete: false
+      preview: false
+      renew: false
+
 ```
+### 🔍 Description
 
-* Controls which actions are logged: code generation, edits, deletions, redemptions.
-* Webhook support sends logs to a Discord server.
+* **Logging Flags**: Toggle which code actions get logged to the console and/or webhook.
+* **Webhook Integration**: Send logs directly to specific Discord channels using different URLs per action.
+* **Embed Mode**: Set `only-embed` to `true` to skip raw log formatting and send only styled embeds.
 
-!!! warning "Webhook Delay"
-    Enabling webhook with bulk generation may cause performance delay due to discord integrated system.
+!!! note "Webhook URL & Embed Behavior"
+    - If both default and generate (or any specific action) are set to the same webhook URL, logs for both will be sent — potentially resulting in duplicate messages.<br>
+    - The `only-embed` option applies to **individual actions only**. 
+    - The `default` webhook does **not** support `only-embed`.  
+    - For embed-only messages, make sure you're using **action-specific URLs** like `generate`, `redeem`, etc.
+!!!abstract "Recommended"
+    Use separate webhook URLs for each action to avoid confusion or duplication.
+
+
+!!! note "Performance Note"
+    Enabling webhook logging — especially with **bulk code generation** — may cause minor delays due to Discord rate limits and processing overhead.
+
+!!! tip "Customize Log Format"
+    You can change the actual message layout in `messages.yml` under the `logger` sections.
+
 
 ---
 
@@ -141,8 +176,75 @@ logger:
 
 ```yaml
 database:
-  version: 1.0
-```
+  server: Default
 
-!!! danger "Don't change unless required"
-    Database versioning is used internally. Modify this only if instructed for upgrades or migration.
+  type: sqlite
+
+  mysql:
+    host: localhost
+    port: 3306
+    name: redeemx
+    username: root
+    password: password
+    additional-options:
+      useSSL: false
+      allowPublicKeyRetrieval: true
+      autoReconnect: true
+      serverTimezone: UTC
+      characterEncoding: UTF-8
+      useUnicode: true
+      rewriteBatchedStatements: true
+
+  maximum-pool-size: 5
+  leak-detection-threshold: 0
+  connection-timeout: 30000
+  idle-timeout: 600000
+  max-lifetime: 1800000
+  debugging: false
+  version: 1.2
+```
+### 📘 Description
+
+- General
+
+| Key      |Description                                                                                                                                                         |
+| -------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `server` | Logical name of the server (e.g., `Survival`, `SkyWars`). Codes are only redeemable on servers with the same name. Use `Default` to allow redemption on any server. |
+| `type`   | Database type: `sqlite` (local file) or `mysql` (external server).                                                                                                  |
+
+MySQL Section
+
+| Key                     | Description                                                        |
+| ----------------------- | ------------------------------------------------------------------ |
+| `host`                  | Database server address. Usually `localhost` or your DB host IP.   |
+| `port`                  | MySQL port. Default is `3306`.                                     |
+| `name`                  | Name of the database schema to use.                                |
+| `username` / `password` | Credentials used to access the database.                           |
+| `additional-options`    | Extra JDBC driver options to ensure compatibility and performance. |
+
+Connection Pooling (HikariCP)
+
+| Key                        | Description                                                                                             |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `maximum-pool-size`        | Total max DB connections (in-use + idle). Recommended: 5–20 depending on server uses.                   |
+| `leak-detection-threshold` | Logs a warning if a connection isn’t returned within this time (ms). Helps find leaks. `0` disables it. |
+| `connection-timeout`       | Max wait time (in ms) to get a DB connection from the pool.                                             |
+| `idle-timeout`             | How long idle (unused) connections are kept before being closed.                                        |
+| `max-lifetime`             | Max lifetime of any connection, regardless of use. Helps clean up stale connections.                    |
+| `debugging`                | If `true`, enables extra debug logs for DB operations (not recommended in production).                  |
+
+Version Control
+
+| Key       | Description                                                                                             |
+| --------- | ------------------------------------------------------------------------------------------------------- |
+| `version` | Internal database version. **Do not change** unless instructed for manual migration or troubleshooting. |
+
+!!!tip "Important Notes"
+    
+    **Restart Required**
+    
+    - Any change in database: config requires a full server restart to apply.
+
+    **Multi-Server Networks**
+
+    - Use unique server: names to isolate code redemptions across different game modes/worlds.

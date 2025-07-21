@@ -41,7 +41,7 @@ The `/rcx renew` command allows administrators to **renew an existing redeem cod
 ## :octicons-shield-check-16: Permissions Required
 
 ```yaml
-redeemx.admin.use.renew
+redeemx.admin.renew
 ```
 
 ---

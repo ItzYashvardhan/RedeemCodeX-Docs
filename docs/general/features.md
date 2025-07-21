@@ -6,14 +6,17 @@ Whether you're giving away rewards, or selling perks — RedeemCodeX has everyth
 ---
 
 ## :octicons-pencil-16: Ease of Customization
-- **Mini-Message Support**
-- **Template Based Generation**
+- **MySQL DataBase Support**
+- **Mini-Message**
+- **Template Based Bulk Generation & Modification**
 - **Preview Code/Template Before Distrubtion**
-- **Player Restriction** (e.g. limit, redemption, permissions etc.)
-- **Cooldown**
+- **Advance Restriction** (e.g. limit, condtions, permissions etc.)
+- **Command Cooldown & Code Cooldown**
 - **Code Validity**
+- **IP Prevention**
 - **Custom Rewards, messages, sounds**
-- **Webhook and Logs**
+- **Discord Embeds**
+- **Auto Backup**
 - **[Discord Bot (addon)](../addons/discord-bot-x.md)**
 - **[Get/Post API (addon)](../addons/redeem-x-rest-api.md)**
 
@@ -68,24 +71,20 @@ Track code redemptions easily:
 /rcx usage template <template> [property]
 ```
 
-!!! note
+!!! Example
     All redemption data is stored safely in the plugin’s data files. You can also log redemptions externally via Discord webhook.<br><br>
     ![Sample Usage Tracking](../images/redeemx-webhook.png)
+
 
 ---
 
 !!! tip "Future Plans"
-    - Support for More MySQL Database.
     - Redeemcode Operation directly through GUI
+    - Bind Redeemcode to items
 ---
 
 ## 🚀 Fast Performance
-* ⏩ Generate thousands of code in a seconds
-* ⚡ Lightweight config and data I/O
-* 🛠️ Tested on high-load environments
-
-!!! warning "Avoid Heavy I/O"
-    Avoid Generating Lakh of codes for a certain template.
----
-
+* Generate thousands of code in a seconds
+* Lightweight config and data I/O
+* Tested on high-load environments
 ---

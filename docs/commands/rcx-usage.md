@@ -54,7 +54,7 @@ It helps admins track who used a code, when it was used, and how many times it h
 ## :octicons-shield-check-16: Permissions Required
 
 ```yaml
-redeemx.admin.use.info
+redeemx.admin.usage
 ```
 
 !!! info "Same as /rcx preview"

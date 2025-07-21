@@ -464,7 +464,7 @@ Customize custom title & subtitle for cetain code or template code.
 ## :octicons-shield-check-16: Permissions Required
 
 ```yaml
-redeemx.admin.use.modify
+redeemx.admin.modify
 ```
 
 ---

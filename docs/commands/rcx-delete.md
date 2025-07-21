@@ -40,7 +40,16 @@ The `/rcx delete` command allows administrators to delete redeem **codes** or **
     ```
     /rcx delete template EVENT2024 SUMMER2025
     ```
+!!! example "Delete All templates codes"
+    ```
+    /rcx delete code * VIP
+    ```
+!!! danger "Delete Template Incuded All Linked Codes"
+    ```
+    /rcx delete template PREMIUM
+    ```
 
+    ⚠️ Be very careful — this will remove template and its associated redeem codes.
 !!! danger "Delete all codes"
     ```
     /rcx delete code * CONFIRM
@@ -53,10 +62,8 @@ The `/rcx delete` command allows administrators to delete redeem **codes** or **
 ## :octicons-shield-check-16: Permissions Required
 
 ```yaml
-redeemx.admin.use.delete
+redeemx.admin.delete
 ```
-!!!note "Confirm Note"
-    - You must type * CONFIRM to bulk-delete all codes or templates.
 
 !!! warning "No undo for deletions"
     Always back up your codes database and templates.yml before performing mass deletions.

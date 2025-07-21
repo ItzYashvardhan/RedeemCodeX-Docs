@@ -82,13 +82,13 @@ nav:
     - Features: general/features.md
   - COMMANDS: 
     - Redeem: commands/redeem.md #redeem-command
+    - Renew: commands/rcx-renew.md #rcx-renew
     - Generate: commands/rcx-gen.md #rcx-gen
     - Modify: commands/rcx-modify.md #rcx-modify
     - Delete: commands/rcx-delete.md #rcx-delete
     - Preview: commands/rcx-preview.md #rcx-preview
     - Usage: commands/rcx-usage.md #rcx-usage
     - List: commands/rcx-list.md #rcx-list
-    - Renew: commands/rcx-renew.md #rcx-renew
   - PERMISSIONS: 
     - Player: permissions/player-permissions.md #permissions-overview
     - Admin: permissions/admin-permissions.md #permissions-overview

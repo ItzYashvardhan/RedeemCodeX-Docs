@@ -60,6 +60,6 @@ Lists all codes redeemed by the player `ItzYashvardhan`.
 ## :octicons-shield-check-16: Permissions Optional
 
 ```yaml
-redeemx.admin.use.list
+redeemx.admin.list
 ```
 

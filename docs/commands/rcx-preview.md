@@ -47,7 +47,7 @@ The `/rcx preview` command allows administrators to **simulate the redemption** 
 ## :octicons-shield-check-16: Permissions Required
 
 ```yaml
-redeemx.admin.use.info
+redeemx.admin.preview
 ```
 
 ---
