@@ -680,6 +680,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="📜 Logger &amp; Webhook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -688,6 +703,21 @@
       🗃️ Database Settings
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🗃️ Database Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -832,6 +862,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../commands/rcx-renew/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Renew
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../commands/rcx-gen/" class="md-nav__link">
         
   
@@ -953,29 +1006,6 @@
   
   <span class="md-ellipsis">
     List
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../commands/rcx-renew/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Renew
     
   </span>
   
@@ -1597,6 +1627,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="📜 Logger &amp; Webhook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1605,6 +1650,21 @@
       🗃️ Database Settings
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🗃️ Database Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1682,20 +1742,18 @@ Each section controls specific behavior like language, code generation limits, c
 <h2 id="redeem-command">🎟️ Redeem Command</h2>
 <div class="highlight"><pre><span></span><code><span class="nt">redeem-command</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">cooldown</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3s&quot;</span>
-<span class="w">  </span><span class="nt">prevent-alt-account</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1">#TODO</span>
+<span class="w">  </span><span class="nt">prevent-alt-account</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <ul>
-<li>Adds cooldown between redemptions</li>
+<li>
+<p><strong><code>cooldown</code></strong><br />
+  Adds a cooldown period between each code redemption attempt.</p>
+</li>
+<li>
+<p><strong><code>prevent-alt-account</code></strong><br />
+  Once a code is redeemed by a player, it cannot be redeemed again from any alternate account associated with the same IP.</p>
+</li>
 </ul>
-<div class="admonition abstract">
-<p class="admonition-title">Future Planned</p>
-<ul>
-<li>Prevents alts (same IP usage) — (Planned/TODO)</li>
-</ul>
-</div>
-<!-- !!! warning "IP Protection"
-    Alt-detection checks for the same IP. It won't work if player limits are not set. -->
-
 <hr />
 <h2 id="auto-deletion">🧹 Auto Deletion</h2>
 <div class="highlight"><pre><span></span><code><span class="nt">auto-delete</span><span class="p">:</span>
@@ -1712,7 +1770,7 @@ Each section controls specific behavior like language, code generation limits, c
 <tbody>
 <tr>
 <td><code>expired-codes</code></td>
-<td>Delete codes after expiration (on server restart)</td>
+<td>Delete codes after expiration</td>
 </tr>
 <tr>
 <td><code>redeemed-codes</code></td>
@@ -1745,7 +1803,7 @@ Each section controls specific behavior like language, code generation limits, c
 </tr>
 <tr>
 <td><code>equip-armor</code></td>
-<td>Auto-equip armor when received (planned/TODO)</td>
+<td>Auto-equip armor when received</td>
 </tr>
 </tbody>
 </table>
@@ -1796,30 +1854,205 @@ Each section controls specific behavior like language, code generation limits, c
 <hr />
 <h2 id="logger-webhook">📜 Logger &amp; Webhook</h2>
 <div class="highlight"><pre><span></span><code><span class="nt">logger</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">generate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">modify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">delete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">redeemed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">redeem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">      </span><span class="c1"># Logs the player, code, and redemption time.</span>
+<span class="w">  </span><span class="nt">generate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">    </span><span class="c1"># Logs the code and template with creation time. Recommended for bulk generation.</span>
+<span class="w">  </span><span class="nt">modify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">      </span><span class="c1"># Logs the code and template with last modification time.</span>
+<span class="w">  </span><span class="nt">delete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">      </span><span class="c1"># Logs the code and template with deletion time.</span>
+<span class="w">  </span><span class="nt">preview</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">     </span><span class="c1"># Logs the code and template when previewed.</span>
+<span class="w">  </span><span class="nt">renew</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">       </span><span class="c1"># Logs the code and template when renewed.</span>
+
 <span class="w">  </span><span class="nt">webhook</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YOUR_DISCORD_WEBHOOK_URL&quot;</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">   </span><span class="c1"># Enable or disable webhook logging.</span>
+
+<span class="w">    </span><span class="c1"># Webhook URLs for sending logs to Discord</span>
+<span class="w">    </span><span class="nt">url</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_DISCORD_WEBHOOK_URL</span>
+<span class="w">      </span><span class="nt">redeem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_DISCORD_WEBHOOK_URL</span>
+<span class="w">      </span><span class="nt">generate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_DISCORD_WEBHOOK_URL</span>
+<span class="w">      </span><span class="nt">modify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_DISCORD_WEBHOOK_URL</span>
+<span class="w">      </span><span class="nt">delete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_DISCORD_WEBHOOK_URL</span>
+<span class="w">      </span><span class="nt">preview</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_DISCORD_WEBHOOK_URL</span>
+<span class="w">      </span><span class="nt">renew</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOUR_DISCORD_WEBHOOK_URL</span>
+
+<span class="w">    </span><span class="c1"># Whether to send only embed messages for each type</span>
+<span class="w">    </span><span class="nt">only-embed</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">redeem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">generate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">delete</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">preview</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">renew</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
+<h3 id="description">🔍 Description</h3>
 <ul>
-<li>Controls which actions are logged: code generation, edits, deletions, redemptions.</li>
-<li>Webhook support sends logs to a Discord server.</li>
+<li><strong>Logging Flags</strong>: Toggle which code actions get logged to the console and/or webhook.</li>
+<li><strong>Webhook Integration</strong>: Send logs directly to specific Discord channels using different URLs per action.</li>
+<li><strong>Embed Mode</strong>: Set <code>only-embed</code> to <code>true</code> to skip raw log formatting and send only styled embeds.</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Webhook Delay</p>
-<p>Enabling webhook with bulk generation may cause performance delay due to discord integrated system.</p>
+<div class="admonition note">
+<p class="admonition-title">Webhook URL &amp; Embed Behavior</p>
+<ul>
+<li>If both default and generate (or any specific action) are set to the same webhook URL, logs for both will be sent — potentially resulting in duplicate messages.<br></li>
+<li>The <code>only-embed</code> option applies to <strong>individual actions only</strong>. </li>
+<li>The <code>default</code> webhook does <strong>not</strong> support <code>only-embed</code>.  </li>
+<li>For embed-only messages, make sure you're using <strong>action-specific URLs</strong> like <code>generate</code>, <code>redeem</code>, etc.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Recommended</p>
+<p>Use separate webhook URLs for each action to avoid confusion or duplication.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Performance Note</p>
+<p>Enabling webhook logging — especially with <strong>bulk code generation</strong> — may cause minor delays due to Discord rate limits and processing overhead.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Customize Log Format</p>
+<p>You can change the actual message layout in <code>messages.yml</code> under the <code>logger</code> sections.</p>
 </div>
 <hr />
 <h2 id="database-settings">🗃️ Database Settings</h2>
 <div class="highlight"><pre><span></span><code><span class="nt">database</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">  </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default</span>
+
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sqlite</span>
+
+<span class="w">  </span><span class="nt">mysql</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redeemx</span>
+<span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+<span class="w">    </span><span class="nt">additional-options</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">useSSL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">allowPublicKeyRetrieval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">autoReconnect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">serverTimezone</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UTC</span>
+<span class="w">      </span><span class="nt">characterEncoding</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UTF-8</span>
+<span class="w">      </span><span class="nt">useUnicode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">rewriteBatchedStatements</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">  </span><span class="nt">maximum-pool-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">leak-detection-threshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">connection-timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30000</span>
+<span class="w">  </span><span class="nt">idle-timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600000</span>
+<span class="w">  </span><span class="nt">max-lifetime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1800000</span>
+<span class="w">  </span><span class="nt">debugging</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.2</span>
 </code></pre></div>
-<div class="admonition danger">
-<p class="admonition-title">Don't change unless required</p>
-<p>Database versioning is used internally. Modify this only if instructed for upgrades or migration.</p>
+<h3 id="description_1">📘 Description</h3>
+<ul>
+<li>General</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>server</code></td>
+<td>Logical name of the server (e.g., <code>Survival</code>, <code>SkyWars</code>). Codes are only redeemable on servers with the same name. Use <code>Default</code> to allow redemption on any server.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Database type: <code>sqlite</code> (local file) or <code>mysql</code> (external server).</td>
+</tr>
+</tbody>
+</table>
+<p>MySQL Section</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>Database server address. Usually <code>localhost</code> or your DB host IP.</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>MySQL port. Default is <code>3306</code>.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Name of the database schema to use.</td>
+</tr>
+<tr>
+<td><code>username</code> / <code>password</code></td>
+<td>Credentials used to access the database.</td>
+</tr>
+<tr>
+<td><code>additional-options</code></td>
+<td>Extra JDBC driver options to ensure compatibility and performance.</td>
+</tr>
+</tbody>
+</table>
+<p>Connection Pooling (HikariCP)</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>maximum-pool-size</code></td>
+<td>Total max DB connections (in-use + idle). Recommended: 5–20 depending on server uses.</td>
+</tr>
+<tr>
+<td><code>leak-detection-threshold</code></td>
+<td>Logs a warning if a connection isn’t returned within this time (ms). Helps find leaks. <code>0</code> disables it.</td>
+</tr>
+<tr>
+<td><code>connection-timeout</code></td>
+<td>Max wait time (in ms) to get a DB connection from the pool.</td>
+</tr>
+<tr>
+<td><code>idle-timeout</code></td>
+<td>How long idle (unused) connections are kept before being closed.</td>
+</tr>
+<tr>
+<td><code>max-lifetime</code></td>
+<td>Max lifetime of any connection, regardless of use. Helps clean up stale connections.</td>
+</tr>
+<tr>
+<td><code>debugging</code></td>
+<td>If <code>true</code>, enables extra debug logs for DB operations (not recommended in production).</td>
+</tr>
+</tbody>
+</table>
+<p>Version Control</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>Internal database version. <strong>Do not change</strong> unless instructed for manual migration or troubleshooting.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Important Notes</p>
+<p><strong>Restart Required</strong></p>
+<ul>
+<li>Any change in database: config requires a full server restart to apply.</li>
+</ul>
+<p><strong>Multi-Server Networks</strong></p>
+<ul>
+<li>Use unique server: names to isolate code redemptions across different game modes/worlds.</li>
+</ul>
 </div>
 
 

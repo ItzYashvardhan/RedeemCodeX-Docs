@@ -827,6 +827,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../commands/rcx-renew/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Renew
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../commands/rcx-gen/" class="md-nav__link">
         
   
@@ -948,29 +971,6 @@
   
   <span class="md-ellipsis">
     List
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../commands/rcx-renew/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Renew
     
   </span>
   
@@ -1625,14 +1625,17 @@ Whether you're giving away rewards, or selling perks — RedeemCodeX has everyth
 <hr />
 <h2 id="ease-of-customization"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.25.25 0 0 0-.064.108l-.558 1.953 1.953-.558a.25.25 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"/></svg></span> Ease of Customization</h2>
 <ul>
-<li><strong>Mini-Message Support</strong></li>
-<li><strong>Template Based Generation</strong></li>
+<li><strong>MySQL DataBase Support</strong></li>
+<li><strong>Mini-Message</strong></li>
+<li><strong>Template Based Bulk Generation &amp; Modification</strong></li>
 <li><strong>Preview Code/Template Before Distrubtion</strong></li>
-<li><strong>Player Restriction</strong> (e.g. limit, redemption, permissions etc.)</li>
-<li><strong>Cooldown</strong></li>
+<li><strong>Advance Restriction</strong> (e.g. limit, condtions, permissions etc.)</li>
+<li><strong>Command Cooldown &amp; Code Cooldown</strong></li>
 <li><strong>Code Validity</strong></li>
+<li><strong>IP Prevention</strong></li>
 <li><strong>Custom Rewards, messages, sounds</strong></li>
-<li><strong>Webhook and Logs</strong></li>
+<li><strong>Discord Embeds</strong></li>
+<li><strong>Auto Backup</strong></li>
 <li><strong><a href="../../addons/discord-bot-x/">Discord Bot (addon)</a></strong></li>
 <li><strong><a href="../../addons/redeem-x-rest-api/">Get/Post API (addon)</a></strong></li>
 </ul>
@@ -1679,8 +1682,8 @@ Whether you're giving away rewards, or selling perks — RedeemCodeX has everyth
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>/rcx<span class="w"> </span>usage<span class="w"> </span>template<span class="w"> </span>&lt;template&gt;<span class="w"> </span><span class="o">[</span>property<span class="o">]</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <p>All redemption data is stored safely in the plugin’s data files. You can also log redemptions externally via Discord webhook.<br><br>
 <img alt="Sample Usage Tracking" src="../../images/redeemx-webhook.png" /></p>
 </div>
@@ -1688,22 +1691,17 @@ Whether you're giving away rewards, or selling perks — RedeemCodeX has everyth
 <div class="admonition tip">
 <p class="admonition-title">Future Plans</p>
 <ul>
-<li>Support for More MySQL Database.</li>
 <li>Redeemcode Operation directly through GUI</li>
+<li>Bind Redeemcode to items</li>
 </ul>
 </div>
 <hr />
 <h2 id="fast-performance">🚀 Fast Performance</h2>
 <ul>
-<li>⏩ Generate thousands of code in a seconds</li>
-<li>⚡ Lightweight config and data I/O</li>
-<li>🛠️ Tested on high-load environments</li>
+<li>Generate thousands of code in a seconds</li>
+<li>Lightweight config and data I/O</li>
+<li>Tested on high-load environments</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Avoid Heavy I/O</p>
-<p>Avoid Generating Lakh of codes for a certain template.</p>
-</div>
-<hr />
 <hr />
 
 
