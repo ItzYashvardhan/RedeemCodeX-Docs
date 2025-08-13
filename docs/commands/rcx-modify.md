@@ -223,10 +223,6 @@ Set cooldown duration between redemptions.
 
 ---
 
-Great! Here's a revised and improved version of the **`commands` section**, now including support for command prefixes (`-c`, `-p`, `-op`) and real examples using `!!! example` blocks — all neatly styled and aligned with your documentation format:
-
----
-
 ### 🧾 `commands`
 
 Manage the **commands that are executed** when a code or template is redeemed.
